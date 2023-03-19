@@ -6,7 +6,7 @@ In setup, you have to install flask and set up a virtual environment having all 
 
 <a href="https://flask.palletsprojects.com/en/2.1.x/installation/#python-version"><img src="https://flask.palletsprojects.com/en/2.1.x/_static/flask-icon.png"></a>
 - Requirements : 
-Here is quick setup in linux/mac os. First go to any desired directory : 
+Here is quick setup in linux / mac os. First go to any desired directory : 
 ```
 git clone https://github.com/kosspbl/comparatea
 ```
@@ -19,7 +19,10 @@ After this let's create a virtual environment to install all the python librarie
 ```
 python3 -m venv venv
 ```
-Now we can install all the libraries.
+```
+. venv/bin/activate
+```
+Now we can install all the dependencies / libraries.
 ```
 pip install Flask bs4 requests lxml
 ```
