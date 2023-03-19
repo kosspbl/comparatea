@@ -11,10 +11,10 @@ def index_page():
     link = ""
     pics = ""
     if request.method == "POST" :
-        import myfile
+        import flipkart
         search_key = str(request.form.get("name"))
         search_key.replace(" ", "+")
-        filename, link, pics = myfile.first_name(search_key)
+        filename, link, pics = flipkart.first_name(search_key)
     return render_template('index.html', result1 = "First Product :  " + str(filename), result2 = link, result3 = pics)
 
 if __name__ == '__main__':
