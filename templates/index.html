@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            Swetank testing website
+        </title>
+        <link rel="stylesheet" href='/static/styles.css'>
+    </head>
+    <body>
+        <div id = "f1">
+        <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
+            <label for = "name">Search Product: </label>
+            <input type = "text" id = "name-user" name = "name" placeholder = "e.g Milton Bottle">
+        </form>
+        <button type="submit" form = "form1">Submit</button>
+
+        </div>
+        <h3>{{result1}}</h3>
+        <h4><a href = "{{result2}}">Link</a></h4>
+        <img src = "{{result3}}">
+    </body>
+</html>
