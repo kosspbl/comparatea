@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup
 
 def first_name(term):
 
-    urla = "https://www.amazon.in/s?k=" + str(term) #url of amazon search
-
     urlf = "https://www.flipkart.com/search?q=" + str(term) #url of flipkart search
 
     ########################## ----- Flipkart Related ----- #########################
