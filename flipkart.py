@@ -83,10 +83,10 @@ def first_name(term):
 
     ##--- to get rid of extra product suggestions
 
-    f_product_prices = f_product_prices[0 : 3]
-    f_product_links = f_product_links[0 : 3]
-    f_product_pics = f_product_pics[0 : 3]
-    f_product_names = f_product_names[0 : 3]
+    f_product_prices = f_product_prices[0 : 7]
+    f_product_links = f_product_links[0 : 7]
+    f_product_pics = f_product_pics[0 : 7]
+    f_product_names = f_product_names[0 : 7]
 
     ##-----Bubble sorting all 4 lists of flipkart
     for m in range(len(f_product_prices)) :
@@ -99,4 +99,4 @@ def first_name(term):
 
 
 
-    return str(f_product_names[0]) + " : ₹" + str(f_product_prices[0]), str("https://www.flipkart.com" + str(f_product_links[0])), str(f_product_pics[0])
+    return str(f_product_names[0]), int(f_product_prices[0]), str("https://www.flipkart.com" + str(f_product_links[0])), str(f_product_pics[0])

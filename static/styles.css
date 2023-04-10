@@ -1,7 +1,49 @@
-#f1 {
-    margin : 15px;
-    width : 350px;
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
+
+body {
+    background-color : #F9F5EB;
+}
+
+#f1, #name-user, #btn {
+    margin : 10px auto;
     border : 2px solid black;
     padding : 15px;
-    font-size : 30px;
+    font-size : 18px;
+    border-radius : 10px;
+    text-align : center;
+}
+
+#f1 {
+    background-color : #E4DCCF;
+}
+
+#win {
+    color : red;
+}
+
+.flex-box {
+    display : flex;
+    background-color : #002B5B;
+    border-radius : 10px;
+}
+
+.flex-box > div {
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 15px;
+    border-radius : 10px;
+}
+
+img {
+    height : 250px;
 }
