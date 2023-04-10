@@ -1,5 +1,5 @@
 # comparatea
-Python web scraping project to compare e-commerce websites and display them on a website.
+Python web scraping project to compare products on different e-commerce websites and display them on our own website.
 
 ## Setup
 In setup, you have to install flask and set up a virtual environment having all the required dependencies. Everything is explained on the Flask website :
