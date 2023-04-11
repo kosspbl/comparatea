@@ -1,30 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @media (orientation: landscape) {
-  body {
+  .flex-box {
     flex-direction: row;
+  }
+  .flex-box > div {
+    max-width : 48%;
+    min-width : 46.3%;
+    max-height : 600px;
+  }
+
+  .f1 {
+    width : 400px;
   }
 }
 
 @media (orientation: portrait) {
-  body {
+  .flex-box {
     flex-direction: column;
+  }
+  .flex-box > div {
+    max-height : 48%;
+    min-height : 48%;
+  }
+
+  .f1 {
+    max-width : 98%;
   }
 }
 
 body {
-    background-color : #F9F5EB;
+    background-color : #def2f1;
+    font-family: 'Poppins', sans-serif;
+    /*background-image : url("/static/bg-image.jpg")*/
 }
 
-#f1, #name-user, #btn {
-    margin : 10px auto;
-    border : 2px solid black;
-    padding : 15px;
+#name-user, #btn {
     font-size : 18px;
-    border-radius : 10px;
-    text-align : center;
+    font-family : 'Poppins';
+    padding : 6px;
+    border : 0;
 }
 
-#f1 {
-    background-color : #E4DCCF;
+#name-user {
+    margin-top : 4px;
+    width : 100%;
+    outline : none;
+    background: transparent;
+}
+
+#btn {
+    cursor: pointer;
+    background: #2196F3;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    background-color: #17252a;
+    border-radius: 30px;
+    color: #FFF;
+    width: 15%;
+    height: 47px;
+    outline: 0;
+}
+
+.f1 {
+    background-color: #feffff;
+    position: relative;
+    border-radius: 30px;
+    padding: 0px 50px 0px 10px;
+    margin : 20px auto;
+    height : 47px;
+    border : none;
+    box-shadow : 3px 3px 3px #5a5a5a;
 }
 
 #win {
@@ -33,18 +80,48 @@ body {
 
 .flex-box {
     display : flex;
-    background-color : #002B5B;
+    /*background-color : #2b7a78;*/
+    margin : 20px auto;
     border-radius : 10px;
+    overflow : hidden;
 }
 
 .flex-box > div {
-    background-color: #ffffff;
+    /*background-image : url("/static/bg-image1.jpg");*/
+    background-color: #feffff;
     margin: 10px;
     padding: 15px;
     border-radius : 10px;
-    min-width : 45%;
+    box-shadow : 7px 8px 6px #5a5a5a;
 }
 
-img {
-    height : 250px;
+.flex-box > div > img {
+    height : 300px;
+    display : block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow : 0px 0px 5px #5a5a5a;
+}
+
+.footer {
+    color : #fff;
+    padding : 2px;
+    margin : 0px auto;
+    background : rgba(12, 50, 37, 0.8);
+    position : fixed;
+    text-align : center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+}
+
+.grp {
+    margin : 2px 2px;
+    font-size : 16px;
+}
+
+.copy {
+    font-size : 14px;
+    margin : 2px;
 }

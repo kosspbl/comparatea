@@ -5,17 +5,19 @@
             Comparatea
         </title>
         <link rel="stylesheet" href='/static/styles.css'>
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
-        <div id = "f1">
 
-            <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
-                <input type = "text" id = "name-user" name = "name" placeholder = "Search : e.g Milton Bottle">
-            </form>
-            <button id = "btn" type="submit" form = "form1">Submit</button>
+        <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
+            <div class = "f1">
+                <input type="text" id="name-user" name="name" placeholder = "Search : e.g. Milton Bottle">
+                <button id = "btn" type="submit" form = "form1"><i class="fa fa-search"></i></button>
+            </div> 
+        </form>
 
-        </div>
 
         <div class = "flex-box">
 
@@ -35,6 +37,14 @@
                 <img src = "{{result6}}">
             </div>
 
+        </div>
+
+        <div class = "footer">
+            <p class = "grp"><b>Project by : SE B2_1</b></p>
+            <a href = "https://github.com/kosspbl/comparatea">
+                <i class="fa fa-github" style="color:white;font-size:35px;"></i>
+            </a>
+            <p class = "copy">koss &copy <script>document.write(new Date().getFullYear())</script></p>
         </div>
 
     </body>
