@@ -12,9 +12,12 @@ def first_name(term):
 
     ########################## ----- Amazon Related ----- #########################
 
-    rf = requests.get(urlf, headers = headers)
-
-    print(rf)
+    try:
+        rf = requests.get(urlf, headers = headers)
+    except requests.exceptions.ConnectionError:
+        return 0, "", 0, "", ""
+    except:
+        return 0, "", 0, "", ""
 
     #for amazon
     soupa = BeautifulSoup(rf.text, "html.parser")
@@ -48,7 +51,6 @@ def first_name(term):
         a = k['href']
         a_product_links.append(a)
 
-
     # for storing product pics
     pics1 = soupa.find_all("img", class_ = "s-image", src = True)
 
@@ -56,11 +58,17 @@ def first_name(term):
         a = l['src']
         a_product_pics.append(a)
 
+
+
     ##Gettings rid of sponsored items
-    a_product_links = a_product_links[4:12]
-    a_product_prices = a_product_prices[4:12]
-    a_product_names = a_product_names[4:12]
-    a_product_pics = a_product_pics[4:12]
+    a_product_links = a_product_links[4:15]
+    a_product_prices = a_product_prices[4:15]
+    a_product_names = a_product_names[4:15]
+    a_product_pics = a_product_pics[4:15]
+
+    #if lists are empty then exception case is raised
+    if not a_product_pics or not a_product_links or not a_product_names or not a_product_prices:
+        return 0, "", 0, "", ""
 
      ##-----Bubble sorting all 4 lists of amazon
     for m in range(len(a_product_prices)) :
@@ -71,5 +79,6 @@ def first_name(term):
                 a_product_links[n], a_product_links[n + 1] = a_product_links[n + 1], a_product_links[n]
                 a_product_pics[n], a_product_pics[n + 1] = a_product_pics[n + 1], a_product_pics[n]
 
-    return str(a_product_names[0]), int(a_product_prices[0]), "https://amazon.in" + str(a_product_links[0]), str(a_product_pics[0])
+
+    return 1, str(a_product_names[0]), int(a_product_prices[0]), "https://amazon.in" + str(a_product_links[0]), str(a_product_pics[0])
 

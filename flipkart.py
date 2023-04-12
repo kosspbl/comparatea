@@ -8,7 +8,13 @@ def first_name(term):
 
     ########################## ----- Flipkart Related ----- #########################
 
-    rf = requests.get(urlf)
+    try:
+        rf = requests.get(urlf)
+    except requests.exceptions.ConnectionError:
+        return 0, "", 0, "", ""
+    except:
+    #if str(rf) != "<Response [200]>":
+        return 0, "", 0, "", ""
 
     #for flipkart
     soupf = BeautifulSoup(rf.text, "lxml")
@@ -82,11 +88,16 @@ def first_name(term):
         f_product_pics.append(d)
 
     ##--- to get rid of extra product suggestions
-
     f_product_prices = f_product_prices[0 : 7]
     f_product_links = f_product_links[0 : 7]
     f_product_pics = f_product_pics[0 : 7]
     f_product_names = f_product_names[0 : 7]
+
+
+    #if lists are empty then exception case is raised
+    if not f_product_pics or not f_product_links or not f_product_names or not f_product_prices:
+        return 0, "", 0, "", ""
+
 
     ##-----Bubble sorting all 4 lists of flipkart
     for m in range(len(f_product_prices)) :
@@ -97,6 +108,4 @@ def first_name(term):
                 f_product_links[n], f_product_links[n + 1] = f_product_links[n + 1], f_product_links[n]
                 f_product_pics[n], f_product_pics[n + 1] = f_product_pics[n + 1], f_product_pics[n]
 
-
-
-    return str(f_product_names[0]), int(f_product_prices[0]), str("https://www.flipkart.com" + str(f_product_links[0])), str(f_product_pics[0])
+    return 1, str(f_product_names[0]), int(f_product_prices[0]), str("https://www.flipkart.com" + str(f_product_links[0])), str(f_product_pics[0])
