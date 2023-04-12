@@ -4,7 +4,7 @@ Python web scraping project to compare products on different e-commerce websites
 ## Setup
 In setup, you have to install flask and set up a virtual environment having all the required dependencies. Everything is explained on the Flask website:
 
-<a href="https://flask.palletsprojects.com/en/2.1.x/installation/#python-version">![pngegg](https://user-images.githubusercontent.com/89385145/231574201-a823f3ec-ff4b-47f0-9677-6eb74c020cfd.png)</a>
+<a href="https://flask.palletsprojects.com/en/2.1.x/installation/#python-version">![pngegg](https://user-images.githubusercontent.com/89385145/231574201-a823f3ec-ff4b-47f0-9677-6eb74c020cfd.png{height=150px})</a>
 <LINK ^^^>
 
 - Requirements : 
