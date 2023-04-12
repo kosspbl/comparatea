@@ -10,29 +10,32 @@
     </head>
     <body>
 
+        <div class = "header">
+            <h1>Comparatea</h1>
+        </div>
 
+
+        <div class = "f1">
         <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
-            <div class = "f1">
                 <input type="text" id="name-user" name="name" placeholder = "Search : e.g. Milton Bottle">
                 <button id = "btn" type="submit" form = "form1"><i class="fa fa-search"></i></button>
-            </div> 
         </form>
-
+        </div>
 
         <div class = "flex-box">
 
             <div class = "flipkart">
-                <h2 id = "win">{{result01}}</h2>
+                <h2 id = "win"><b>{{result01}}</b></h2>
                 <h3>{{result1}}</h3>
-                <h4>₹{{resultp1}}</h4>
+                <h4> {{resultp1}}</h4>
                 <h4><a href = "{{result2}}">Flipkart Link</a></h4>
                 <img src = "{{result3}}">
             </div>
 
             <div class = "amazon">
-                <h2 id = "win">{{result02}}</h2>
+                <h2 id = "win"><b>{{result02}}</b></h2>
                 <h3>{{result4}}</h3>
-                <h4>₹{{resultp2}}</h4>
+                <h4>{{resultp2}}</h4>
                 <h4><a href = "{{result5}}">Amazon Link</a></h4>
                 <img src = "{{result6}}">
             </div>

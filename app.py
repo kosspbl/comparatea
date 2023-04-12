@@ -16,35 +16,54 @@ def index_page():
     fLink = ""
     fPics = ""
     fPrice = ""
+    fflag = None
 
     #for amazon
     aProductName = ""
     aLink = ""
     aPics = ""
     aPrice = ""
+    aflag = None
 
     #for declaring winnner
     fwin = ""
     awin = ""
 
+    if request.method == "GET" :
+        return render_template("index.html")
+
 
     if request.method == "POST" :
         search_key = str(request.form.get("name"))
         search_key.replace(" ", "+")
-        fProductName, fPrice, fLink, fPics = flipkart.first_name(search_key)
-        aProductName, aPrice, aLink, aPics = amazon.first_name(search_key)
+        fflag, fProductName, fPrice, fLink, fPics = flipkart.first_name(search_key)
+        aflag, aProductName, aPrice, aLink, aPics = amazon.first_name(search_key)
 
-        if fPrice <= aPrice:
-            fwin = "Winner"
+        if fflag == 0 or aflag == 0:
+            return render_template("error.html")
+           # fwin = "Error : Flipkart/Amazon refused to connect"
+           # awin = "Error : Flipkart/Amazon refused to connect"
+           # fProductName, aProductName = "", ""
+           # fPrice, aPrice = "", ""
+           # aLink, fLink = "/error", "/error"
+           # fPics, aPics = "", ""
         else:
-            awin = "Winner"
+            if fPrice <= aPrice:
+                fwin = "Winner"
+            else:
+                awin = "Winner"
     return render_template('index.html',
                            result01 = fwin, result02 = awin,
-                           result1 = "Cheapest on Flipkart : " + str(fProductName),
+                           result1 = str(fProductName),
                            result2 = fLink, result3 = fPics,
-                           result4 = "Cheapest on Amazon : " + str(aProductName),
+                           result4 = str(aProductName),
                            result5 = aLink, result6 = aPics,
-                           resultp1 = fPrice, resultp2 = aPrice)
+                           resultp1 = "₹" + str(fPrice), resultp2 = "₹" + str(aPrice))
+
+#error page
+@app.route('/error', methods = ["GET", "POST"])
+def error():
+    return render_template("error.html")
 
 if __name__ == '__main__':
     app.run()
