@@ -22,7 +22,7 @@ def index_page():
     aLink = ""
     aPics = ""
     aPrice = ""
-    
+
     #for declaring winnner
     fwin = ""
     awin = ""
