@@ -8,6 +8,7 @@ print("This is app.py")
 app = Flask(__name__)
 
 @app.route('/', methods = ["GET", "POST"])
+@app.route('/home', methods = ["GET", "POST"])
 def index_page():
     search_key = ""
 
@@ -30,7 +31,10 @@ def index_page():
     awin = ""
 
     if request.method == "GET" :
-        return render_template("index.html")
+        aLink = "/error"
+        fLink = "/error"
+        return render_template("index.html",
+                               result2 = fLink, result5 = aLink)
 
 
     if request.method == "POST" :
@@ -49,9 +53,9 @@ def index_page():
            # fPics, aPics = "", ""
         else:
             if fPrice <= aPrice:
-                fwin = "Winner"
+                fwin = "Winner: "
             else:
-                awin = "Winner"
+                awin = "Winner: "
     return render_template('index.html',
                            result01 = fwin, result02 = awin,
                            result1 = str(fProductName),
@@ -64,6 +68,11 @@ def index_page():
 @app.route('/error', methods = ["GET", "POST"])
 def error():
     return render_template("error.html")
+
+#about page
+@app.route('/about', methods = ["GET"])
+def about():
+    return render_template("about.html")
 
 if __name__ == '__main__':
     app.run()
