@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <title>
-            Comparatea
+            Comparatea | Home
         </title>
         <link rel="stylesheet" href='/static/styles.css'>
         <!-- Load icon library -->
@@ -11,7 +11,12 @@
     <body>
 
         <div class = "header">
-            <h1>Comparatea</h1>
+            <div class = "header-logo">
+                <a href="/"><img class = "logo-img" src = "/static/comparatea-light.png"></a>
+            </div>
+            <a href = "/about" class = "about">
+                <h4 class = "about-text">About</h4>
+            </a>
         </div>
 
 
@@ -25,19 +30,26 @@
         <div class = "flex-box">
 
             <div class = "flipkart">
-                <h2 id = "win"><b>{{result01}}</b></h2>
-                <h3>{{result1}}</h3>
-                <h4> {{resultp1}}</h4>
-                <h4><a href = "{{result2}}">Flipkart Link</a></h4>
-                <img src = "{{result3}}">
+                <img class = "site-image" src="/static/flipkart.png">
+                <div class = "product-title"><b class = "win">{{result01}}</b>{{result1}}</div>
+                <div class ="product-price"> {{resultp1}}</div>
+                <a class = "product-link" href = "{{result2}}">
+                    <img class = "link-image" src="/static/flipkart.png">
+                    <i class="fa fa-link" style="color:black;font-size:20px;"></i>
+                </a>
+                <img class = "product-image" src = "{{result3}}">
             </div>
 
             <div class = "amazon">
-                <h2 id = "win"><b>{{result02}}</b></h2>
-                <h3>{{result4}}</h3>
-                <h4>{{resultp2}}</h4>
-                <h4><a href = "{{result5}}">Amazon Link</a></h4>
-                <img src = "{{result6}}">
+                <img class = "site-image" src="/static/amazon.png">
+                <div class = "product-title"><b class = "win">{{result02}}</b>{{result4}}</div>
+                <div class = "product-price">{{resultp2}}</div>
+                <a class = "product-link" href = "{{result5}}">
+                    <img class = "link-image" src="/static/amazon.png">
+                    <i class="fa fa-link" style="color:black;font-size:20px;"></i>
+                </a>
+
+                <img class = "product-image" src = "{{result6}}">
             </div>
 
         </div>

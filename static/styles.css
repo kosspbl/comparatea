@@ -1,42 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @media (orientation: landscape) {
-  .flex-box {
+  .flex-box, .header{
     flex-direction: row;
   }
-  .flex-box > div {
-    max-width : 48%;
-    min-width : 46.3%;
-    max-height : 600px;
+
+  .header {
+    height : 100px;
+  }
+
+  .logo-img {
+    height : 90px;
+  }
+
+  .about {
+    margin-left : auto;
+    width : 90px;
+    margin-right : 20px;
+    margin-top : auto;
+    margin-bottom : auto;
+  }
+
+  .flex-box {
+    width : 100%;
+    min-height : 70vh;
   }
 
   .f1 {
     width : 400px;
   }
+
+  /*
+  .footer {
+    color : #fff;
+    margin : 0px auto;
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    background : rgba(0, 0, 0, 0.6);
+    text-align : center;
+    width: 100%;
+    height: 90px;
+  }
+*/
 }
 
 @media (orientation: portrait) {
-  .flex-box {
+  .flex-box, .header{
     flex-direction: column;
   }
-  .flex-box > div {
-    max-height : 48%;
-    min-height : 48%;
+
+  .header {
+    height : 120px;
+  }
+
+  .logo-img {
+    height : 70px;
+  }
+
+  .flex-box > div{
+      min-height : 35vh;
+  }
+
+  .about {
+    margin : 2px auto;
+    width : 85px;
+    margin-bottom: 4px;
   }
 
   .f1 {
     max-width : 98%;
   }
+
 }
 
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
 body {
     background-color : #def2f1;
     font-family: 'Poppins', sans-serif;
-    /*background-image : url("/static/bg-image.jpg")*/
 }
 
+/* -----------HEADER---------------*/
 
 .header {
+    display : flex;
     color : #fff;
     position : fixed;
     top : 0;
@@ -45,8 +96,34 @@ body {
     background : #17252a;
     text-align : center;
     width: 100%;
-    height: 100px;
 }
+
+
+
+.about {
+    height : 40%;
+    padding : 2px;
+    text-align: center;
+    background-color: #def2f1;
+    border-radius : 30px;
+}
+
+.about-text {
+    margin-bottom : auto;
+    margin-top : 5px;
+    font-size : 18px;
+    color : #17252a;
+}
+
+.about {
+    text-decoration: none;
+}
+
+.about:hover {
+    background-color : #c2e5d6;
+}
+
+/* ----------- SEARCH BOX --------------- */
 
 #name-user, #btn {
     font-size : 18px;
@@ -87,21 +164,15 @@ body {
     box-shadow : 3px 3px 3px #5a5a5a;
 }
 
-#win {
-    color : red;
-    text-shadow : 1px 1px #f0f0f0;
-}
+/* ----------- FLIPKART and AMAZON BOX --------------- */
 
 .flex-box {
     display : flex;
-    /*background-color : #2b7a78;*/
-    margin : 20px auto;
     border-radius : 10px;
-    overflow : hidden;
 }
 
 .flex-box > div {
-    /*background-image : url("/static/bg-image1.jpg");*/
+    flex : 1;
     background-color: #feffff;
     margin: 10px;
     padding: 15px;
@@ -109,23 +180,93 @@ body {
     box-shadow : 7px 8px 6px #5a5a5a;
 }
 
-.flex-box > div > img {
-    height : 300px;
+.flipkart, .amazon {
+    display : flex;
+    flex-direction: column;
+}
+
+.win {
+    color : red;
+}
+
+.product-title {
+    flex : 2;
+    width : 95%;
+    padding : 2px 2px;
+    font-size : 18px;
+    margin : 10px auto;
+    text-align: center;
+    border-radius : 30px;
+    vertical-align: middle;
+    box-shadow : 3px 3px 5px #5a5a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win {
+    color : red;
+    vertical-align: top;
+}
+
+.site-image {
+    min-height : 50px;
+    max-height : 50px;
+    display: block;
+    flex : 1.5;
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow : 3px 3px 5px #5a5a5a;
+}
+
+.product-link, .product-price {
+    flex : 1;
+    text-align : center;
+    font-size : 18px;
+    vertical-align: middle;
+    padding : 2px 2px;
+    margin : 10px auto;
+    border-radius: 30px;
+    box-shadow : 3px 3px 5px #5a5a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-price {
+    width : 90px;
+    min-height : 34px !important;
+}
+
+.product-link {
+    text-decoration: none;
+    min-height : 34px !important;
+    width : 90px;
+}
+.product-image {
+    flex : 3;
+    max-height : 300px;
+    min-height : 300px;
     display : block;
     margin-left: auto;
     margin-right: auto;
-    box-shadow : 0px 0px 5px #5a5a5a;
+    border-radius : 10px;
+    box-shadow : 3px 3px 5px #5a5a5a;
 }
+
+.link-image {
+    max-height : 20px;
+}
+
+/* ----------- FOOTER ---------- */
 
 .footer {
     color : #fff;
     margin : 0px auto;
     background : rgba(0, 0, 0, 0.6);
-    position : fixed;
     text-align : center;
     width: 100%;
-    left: 0;
-    bottom: 0;
     height: 90px;
 }
 
