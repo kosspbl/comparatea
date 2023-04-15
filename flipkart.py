@@ -26,7 +26,7 @@ def first_name(term):
     f_product_pics = []
 
     ####FLIPKART PRODUCTS
-    
+
     #Stores all flipkart product names related divs/a tags classes
     n1 = [soupf.find_all("div", class_ = "_2WkVRV"),
      soupf.find_all("a", class_ = "s1Q9rs"),
@@ -42,12 +42,12 @@ def first_name(term):
     p1 = [soupf.find_all("div", class_ = "_30jeq3"),
           soupf.find_all("div", class_ = "_30jeq3 _1_WHN1")]
     pricesf = []
-    
+
     for i in p1 :
         if i :
             pricesf = i
 
-    
+
     ####FLIPKART PRODUCT LINKS
     l1 = [soupf.find_all("a", class_ = "_2rpwqI", href = True),
           soupf.find_all("a", class_ = "s1Q9rs", href = True),
@@ -55,7 +55,7 @@ def first_name(term):
           soupf.find_all("a", class_ = "_1fQZEK", href = True),
           soupf.find_all("a", class_ = "_8VNy32", href = True)]
 
-    linksf = []    
+    linksf = []
 
     for i in l1 :
         if i :
@@ -88,10 +88,10 @@ def first_name(term):
         f_product_pics.append(d)
 
     ##--- to get rid of extra product suggestions
-    f_product_prices = f_product_prices[0 : 7]
-    f_product_links = f_product_links[0 : 7]
-    f_product_pics = f_product_pics[0 : 7]
-    f_product_names = f_product_names[0 : 7]
+    f_product_prices = f_product_prices[0 : 13]
+    f_product_links = f_product_links[0 : 13]
+    f_product_pics = f_product_pics[0 : 13]
+    f_product_names = f_product_names[0 : 13]
 
 
     #if lists are empty then exception case is raised

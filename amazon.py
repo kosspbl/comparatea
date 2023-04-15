@@ -61,10 +61,10 @@ def first_name(term):
 
 
     ##Gettings rid of sponsored items
-    a_product_links = a_product_links[4:15]
-    a_product_prices = a_product_prices[4:15]
-    a_product_names = a_product_names[4:15]
-    a_product_pics = a_product_pics[4:15]
+    a_product_links = a_product_links[4:18]
+    a_product_prices = a_product_prices[4:18]
+    a_product_names = a_product_names[4:18]
+    a_product_pics = a_product_pics[4:18]
 
     #if lists are empty then exception case is raised
     if not a_product_pics or not a_product_links or not a_product_names or not a_product_prices:
