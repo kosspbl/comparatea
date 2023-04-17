@@ -88,10 +88,10 @@ def first_name(term):
         f_product_pics.append(d)
 
     ##--- to get rid of extra product suggestions
-    f_product_prices = f_product_prices[0 : 13]
-    f_product_links = f_product_links[0 : 13]
-    f_product_pics = f_product_pics[0 : 13]
-    f_product_names = f_product_names[0 : 13]
+    f_product_prices = f_product_prices[0 : 9]
+    f_product_links = f_product_links[0 : 9]
+    f_product_pics = f_product_pics[0 : 9]
+    f_product_names = f_product_names[0 : 9]
 
 
     #if lists are empty then exception case is raised

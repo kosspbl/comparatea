@@ -38,6 +38,7 @@ def first_name(term):
         a_product_names.append(a)
 
     #for storing prices
+
     p1 = soupa.find_all("span", class_ = "a-price-whole")
 
     for j in p1:
@@ -61,10 +62,16 @@ def first_name(term):
 
 
     ##Gettings rid of sponsored items
-    a_product_links = a_product_links[4:18]
-    a_product_prices = a_product_prices[4:18]
-    a_product_names = a_product_names[4:18]
-    a_product_pics = a_product_pics[4:18]
+    sponsor_div = soupa.find_all("span", class_ = "a-price _bGlmZ_price_23Ix_")
+    offset = len(sponsor_div)
+    print(offset)
+    a_product_links = a_product_links[5:14]
+    a_product_prices = a_product_prices[(5 + offset):(14 + offset)]
+    a_product_names = a_product_names[5:14]
+    a_product_pics = a_product_pics[5:14]
+
+    for i in range(len(a_product_prices)):
+        print(a_product_prices[i], " ", a_product_names[i])
 
     #if lists are empty then exception case is raised
     if not a_product_pics or not a_product_links or not a_product_names or not a_product_prices:
