@@ -31,7 +31,6 @@ python3 -m venv venv
 py -3 -m venv venv
 venv\Scripts\activate
 ```
-N
 Now we can install all the dependencies / libraries.
 ```
 pip install Flask bs4 requests lxml
