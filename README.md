@@ -1,4 +1,4 @@
-<img src = "https://github.com/kosspbl/comparatea/blob/main/static/comparatea-light.png" height = "180px" >
+<img src = "https://github.com/kosspbl/comparatea/blob/main/static/comparatea-light.png" height = "130px" >
 Python, Html & CSS web scraping project to compare products on different e-commerce websites and display them on our own website.
 
 ## Setup
