@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kosspbl/comparatea/blob/main/static/comparatea-light.png">
-  <img alt="Comparatea logo" src = "https://github.com/kosspbl/comparatea/blob/main/static/comparatea-dark.png" height = "130px" >
+  <img alt="Comparatea logo" src = "https://github.com/kosspbl/comparatea/blob/main/static/comparatea-dark.png" height = "110px" >
 </picture>
 
 Python, Html & CSS web scraping project to compare products on different e-commerce websites and display them on our own website.
