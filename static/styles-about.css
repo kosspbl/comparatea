@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 @media (orientation: landscape) {
   .flex-box, .header{
@@ -26,6 +27,13 @@
     width : 100%;
   }
 
+  .what, .who {
+    flex-direction: row;
+  }
+
+  .members {
+    flex-direction: row;
+  }
 }
 
 @media (orientation: portrait) {
@@ -52,6 +60,17 @@
     min-height : 48%;
   }
 
+  .what, .who {
+    flex-direction: column;
+  }
+
+  .members {
+    flex-direction: column;
+  }
+
+  .members > div {
+    width: 260px;
+  }
 }
 
 * {
@@ -62,7 +81,7 @@
 
 body {
     background-color : #def2f1;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* -----------HEADER---------------*/
@@ -104,28 +123,136 @@ body {
     background-color : #c2e5d6;
 }
 
+
+
 /* ----------- About page elements ------------ */
 
 .header-txt {
-    font-size : 30px;
-    margin-top: 130px;
+    font-size : 35px;
+    margin-top: 150px;
     text-align: center;
     font-family: 'Comfortaa';
     font-weight: 700;
     font-style: bold;
 }
 
+.what, .who {
+    display: flex;
+    margin: 20px auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #feffff;
+    border-radius : 10px;
+    box-shadow : 7px 8px 6px #5a5a5a;
+    padding: 20px;
+}
+
+.what > *, .who > * {
+    margin: 20px auto;
+    padding: 20px 20px;
+}
+
+.what-title > .color, .who-title > .color {
+    color: #78c9c5;
+}
+
+.what-title, .who-title {
+    font-size: 30px;
+    font-family: 'Comfortaa';
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: bold;
+    flex: 1;
+}
+
+.what-para {
+    flex: 2;
+    border-radius: 30px;
+    box-shadow : 3px 3px 3px #5a5a5a;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.who-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.members {
+    display: flex;
+    flex: 3;
+    min-width: 98%;
+    margin: 10px auto;
+}
+
+.indira {
+    margin: 10px auto;
+}
+
+.indira > img{
+    flex: 1;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px auto;
+    border-radius: 30px;
+    box-shadow : 3px 3px 3px #5a5a5a;
+}
+
+.details {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px auto;
+    font-size: 16px;
+    border-radius: 30px;
+    box-shadow : 3px 3px 3px #5a5a5a;
+    text-align: center;
+    padding: 10px;
+}
+
+.members > div {
+    flex: 1;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px auto;
+    font-size: 16px;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow : 3px 3px 3px #5a5a5a;
+    text-align: center;
+    padding: 10px;
+}
+
+.mem-image {
+    height: 60px;
+    margin: 10px auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+.mem-name {
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+.rollno {
+    font-size: 14px;
+    margin: 10px auto;
+}
+
 /* ----------- FOOTER ---------- */
+
 .footer {
     color : #fff;
     margin : 0px auto;
-    position : fixed;
-    bottom : 0;
-    left : 0;
     background : rgba(0, 0, 0, 0.6);
     text-align : center;
     width: 100%;
     height: 90px;
+    padding: 4px;
 }
 
 .grp {
@@ -137,3 +264,4 @@ body {
     font-size : 14px;
     margin : 2px;
 }
+

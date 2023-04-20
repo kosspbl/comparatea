@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 @media (orientation: landscape) {
   .flex-box, .header{
@@ -81,7 +81,7 @@
 }
 body {
     background-color : #def2f1;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* -----------HEADER---------------*/
@@ -127,7 +127,7 @@ body {
 
 #name-user, #btn {
     font-size : 18px;
-    font-family : 'Poppins';
+    font-family : 'Rubik';
     padding : 6px;
     border : 0;
 }
@@ -269,6 +269,7 @@ body {
     text-align : center;
     width: 100%;
     height: 90px;
+    padding: 4px;
 }
 
 .grp {
