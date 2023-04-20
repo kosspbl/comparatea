@@ -46,8 +46,7 @@ def first_name(term):
         a_product_prices.append(int(a.replace(".","")))
 
     #for storing product links
-    l1 = soupa.find_all('a', class_ = "a-link-normal s-no-outline", href = True)
-
+    l1 = soupa.find_all('a', class_ = "a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal", href = True)
     for k in l1:
         a = k['href']
         a_product_links.append(a)
