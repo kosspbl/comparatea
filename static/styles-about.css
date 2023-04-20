@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@font-face {
+    font-family: 'Circular';
+    src: url('fonts/Circular/CircularStd-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('fonts/Comfortaa/Comfortaa-Bold.ttf') format('truetype');
+}
 
 @media (orientation: landscape) {
   .flex-box, .header{
@@ -81,7 +87,7 @@
 
 body {
     background-color : #def2f1;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Circular', sans-serif;
 }
 
 /* -----------HEADER---------------*/

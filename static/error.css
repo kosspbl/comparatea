@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@font-face {
+    font-family: 'Circular';
+    src: url('fonts/Circular/CircularStd-Book.otf') format('opentype');
+}
 
 @media (orientation : portrait) {
     .header {
@@ -59,7 +62,7 @@
 }
 
 body {
-    font-family : 'Rubik', monospace;
+    font-family : 'Circular', monospace;
 }
 
 /* -----------HEADER---------------*/
@@ -88,7 +91,7 @@ body {
 
 .home-text {
     margin-bottom : auto;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Circular', sans-serif;
     margin-top : 5px;
     font-size : 18px;
     color : #17252a;
