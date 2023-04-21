@@ -19,18 +19,21 @@
             </a>
         </div>
 
+        <div class = "wave">
+            <img src ="/static/wave.png">
+        </div>
 
         <div class = "f1">
-        <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
-                <input type="text" id="name-user" name="name" placeholder = "Search : e.g. Keyboard">
-                <button id = "btn" type="submit" form = "form1"><i class="fa fa-search"></i></button>
-        </form>
+         <form action = "{{url_for("index_page")}}" method = "post" id = "form1">
+                 <input type="text" id="name-user" name="name" placeholder = "Search : e.g. Keyboard">
+                 <button id = "btn" type="submit" form = "form1"><i class="fa fa-search"></i></button>
+         </form>
         </div>
 
         <div class = "flex-box">
 
             <div class = "flipkart">
-                <img class = "site-image" src="/static/flipkart.png">
+                <img class = "site-image" src="/static/flipkart-color.png">
                 <div class = "product-title"><b class = "win">{{result01}}</b>{{result1}}</div>
                 <div class ="product-price"> {{resultp1}}</div>
                 <a class = "product-link" href = "{{result2}}">
@@ -41,7 +44,7 @@
             </div>
 
             <div class = "amazon">
-                <img class = "site-image" src="/static/amazon.png">
+                <img class = "site-image" src="/static/amazon-color.png">
                 <div class = "product-title"><b class = "win">{{result02}}</b>{{result4}}</div>
                 <div class = "product-price">{{resultp2}}</div>
                 <a class = "product-link" href = "{{result5}}">
@@ -57,7 +60,7 @@
         <div class = "footer">
             <p class = "grp"><b>Project by : SE B2_1</b></p>
             <a href = "https://github.com/kosspbl/comparatea">
-                <i class="fa fa-github" style="color:white;font-size:40px;"></i>
+                <i class="fa fa-github" style="color:black;font-size:40px;"></i>
             </a>
             <p class = "copy">koss &copy <script>document.write(new Date().getFullYear())</script></p>
         </div>
