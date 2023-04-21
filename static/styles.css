@@ -77,7 +77,7 @@
   }
 
   .f1 {
-    max-width : 98%;
+    width : 400px;
   }
 
 }
@@ -88,7 +88,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color : #def2f1;
+    background-color : #f0f9f9;
     font-family: 'Circular', sans-serif;
 }
 
@@ -151,7 +151,7 @@ body {
     cursor: pointer;
     position: absolute;
     right: -1px;
-    top: 0px;
+    top: 1px;
     background-color: #17252a;
     border-radius: 30px;
     color: #FFF;
@@ -160,16 +160,31 @@ body {
     outline: 0;
 }
 
+#btn:hover {
+    background-color: #41766f;
+}
+
 .f1 {
     background-color: #feffff;
     border-radius: 30px;
     position : relative;
     padding: 0px 50px 0px 10px;
-    margin : 20px auto;
-    margin-top : 140px;
+    margin : 0px auto;
+    margin-top : 0px;
+    margin-bottom: 20px;
     height : 47px;
     border : none;
-    box-shadow : 3px 3px 3px #5a5a5a;
+    box-shadow : 3px 3px 0px #1d2e35;
+}
+
+.waver {
+    width: 100%;
+}
+.wave img {
+    width: 100%;
+    max-height: 200px;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }
 
 /* ----------- FLIPKART and AMAZON BOX --------------- */
@@ -185,12 +200,26 @@ body {
     margin: 10px;
     padding: 15px;
     border-radius : 10px;
-    box-shadow : 7px 8px 6px #5a5a5a;
+    box-shadow : 7px 7px 0px #1d2e35;
 }
 
 .flipkart, .amazon {
     display : flex;
     flex-direction: column;
+}
+
+.flipkart, .amazon {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.flipkart {
+    background-image: url("/static/flipkart-bg.jpg");
+}
+
+.amazon {
+    background-image: url("/static/amazon-bg.jpg");
 }
 
 .win {
@@ -206,9 +235,10 @@ body {
     text-align: center;
     border-radius : 30px;
     vertical-align: middle;
-    box-shadow : 3px 3px 5px #5a5a5a;
+    box-shadow : 4px 4px 0px #1d2e35;
     display: flex;
     justify-content: center;
+    background-color: #fff;
     align-items: center;
 }
 
@@ -218,14 +248,15 @@ body {
 }
 
 .site-image {
-    min-height : 50px;
-    max-height : 50px;
+    min-height : 80px;
+    max-height : 80px;
     display: block;
     flex : 1.5;
     border-radius: 40px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow : 3px 3px 5px #5a5a5a;
+    background-color: #fff;
+    box-shadow : 4px 4px 0px #1d2e35;
 }
 
 .product-link, .product-price {
@@ -236,9 +267,10 @@ body {
     padding : 2px 2px;
     margin : 10px auto;
     border-radius: 30px;
-    box-shadow : 3px 3px 5px #5a5a5a;
+    box-shadow : 4px 4px 0px #1d2e35;
     display: flex;
     justify-content: center;
+    background-color: #fff;
     align-items: center;
 }
 
@@ -261,7 +293,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius : 10px;
-    box-shadow : 3px 3px 5px #5a5a5a;
+    box-shadow : 4px 4px 0px #1d2e35;
+    background-color: #fff;
 }
 
 .link-image {
@@ -271,9 +304,10 @@ body {
 /* ----------- FOOTER ---------- */
 
 .footer {
-    color : #fff;
+    color : #000000;
     margin : 0px auto;
-    background : rgba(0, 0, 0, 0.6);
+    margin-top: 60px;
+    background-color: #d2e5e4;
     text-align : center;
     width: 100%;
     height: 90px;

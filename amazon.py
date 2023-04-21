@@ -61,8 +61,15 @@ def first_name(term):
 
 
     ##Gettings rid of sponsored items
-    sponsor_div = soupa.find_all("span", class_ = "a-price _bGlmZ_price_23Ix_")
-    offset = len(sponsor_div)
+    sponsor_price = []
+    random_price = [soupa.find_all("span", class_ = "a-price _bGlmZ_price_23Ix_"),
+                    soupa.find_all("span", class_ = "a-price _bXVsd_price_23Ix_")]
+
+    for j in random_price:
+        if j:
+            sponsor_price = j
+
+    offset = len(sponsor_price)
     print(offset)
     a_product_links = a_product_links[5:14]
     a_product_prices = a_product_prices[(5 + offset):(14 + offset)]
