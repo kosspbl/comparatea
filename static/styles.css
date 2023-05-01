@@ -151,7 +151,7 @@ body {
 }
 
 #name-user {
-    margin-top : 4px;
+    margin-top : 5px;
     width : 100%;
     outline : none;
     background: transparent;
@@ -184,7 +184,8 @@ body {
     margin-bottom: 20px;
     height : 47px;
     border : none;
-    box-shadow : 3px 3px 0px #1d2e35;
+    /*box-shadow : 3px 3px 0px #263d45;*/
+    box-shadow: rgba(24, 38, 43, 0.15) 2.95px 2.95px 2.6px;
 }
 
 .waver {
@@ -210,7 +211,7 @@ body {
     margin: 10px;
     padding: 15px;
     border-radius : 10px;
-    box-shadow : 7px 7px 0px #1d2e35;
+    box-shadow: rgba(24, 38, 43, 0.15) 4.95px 4.95px 2.6px;
 }
 
 .flipkart, .amazon {
@@ -246,7 +247,7 @@ body {
     text-align: center;
     border-radius : 30px;
     vertical-align: middle;
-    box-shadow : 4px 4px 0px #1d2e35;
+    box-shadow: rgba(24, 38, 43, 0.15) 2.95px 2.95px 2.6px;
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -262,7 +263,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    box-shadow : 4px 4px 0px #1d2e35;
+    /*box-shadow : 4px 4px 0px #263d45;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 3px 8px 0px;
 }
 
 .product-link, .product-price {
@@ -273,7 +275,7 @@ body {
     padding : 2px 2px;
     margin : 10px auto;
     border-radius: 30px;
-    box-shadow : 4px 4px 0px #1d2e35;
+    box-shadow: rgba(24, 38, 43, 0.15) 2.95px 2.95px 2.6px;
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -299,7 +301,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius : 10px;
-    box-shadow : 4px 4px 0px #1d2e35;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
     background-color: #fff;
 }
 
@@ -313,7 +315,7 @@ body {
     color : #000000;
     margin : 0px auto;
     margin-top: 60px;
-    background-color: #d2e5e4;
+    background-color: #cfe8e7;
     text-align : center;
     width: 100%;
     height: 90px;
