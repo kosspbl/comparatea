@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template #importing flask libraries
-import flipkart
-import amazon
+from flipkart import flipkart_search
+from amazon import amazon_search
 
 
 print("This is app.py")
@@ -40,8 +40,8 @@ def index_page():
     if request.method == "POST" :
         search_key = str(request.form.get("name"))
         search_key.replace(" ", "+")
-        fflag, fProductName, fPrice, fLink, fPics = flipkart.first_name(search_key)
-        aflag, aProductName, aPrice, aLink, aPics = amazon.first_name(search_key)
+        fflag, fProductName, fPrice, fLink, fPics = flipkart_search(search_key)
+        aflag, aProductName, aPrice, aLink, aPics = amazon_search(search_key)
 
         if fflag == 0 or aflag == 0:
             return render_template("error.html")
