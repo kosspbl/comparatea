@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def first_name(term):
+def flipkart_search(term):
 
     urlf = "https://www.flipkart.com/search?q=" + str(term) #url of flipkart search
 
