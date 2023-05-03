@@ -1,6 +1,4 @@
 ##---------------FLIPKART----------------
-import requests
-from bs4 import BeautifulSoup
 
 def flipkart_search(term):
 
@@ -8,8 +6,13 @@ def flipkart_search(term):
 
     ########################## ----- Flipkart Related ----- #########################
 
+    import requests
+    from bs4 import BeautifulSoup
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
+
     try:
-        rf = requests.get(urlf)
+        rf = requests.get(urlf, headers = headers)
     except requests.exceptions.ConnectionError:
         return 0, "", 0, "", ""
     except:
