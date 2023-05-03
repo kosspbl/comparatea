@@ -1,10 +1,10 @@
 ##--------------AMAZON--------------
-import requests
-from bs4 import BeautifulSoup
+#import requests
+#from bs4 import BeautifulSoup
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
-}
+#headers = {
+        #    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
+        #}
 
 def amazon_search(term):
 
@@ -12,9 +12,16 @@ def amazon_search(term):
 
     ########################## ----- Amazon Related ----- #########################
 
+    import requests
+    from bs4 import BeautifulSoup
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
+
     try:
         rf = requests.get(urlf, headers = headers)
     except requests.exceptions.ConnectionError:
+        print(requests.exceptions.ConnectionError)
         return 0, "", 0, "", ""
     except:
         return 0, "", 0, "", ""
@@ -70,14 +77,14 @@ def amazon_search(term):
             sponsor_price = j
 
     offset = len(sponsor_price)
-    print(offset)
+    #print(offset)
     a_product_links = a_product_links[5:14]
     a_product_prices = a_product_prices[(5 + offset):(14 + offset)]
     a_product_names = a_product_names[5:14]
     a_product_pics = a_product_pics[5:14]
 
-    for i in range(len(a_product_prices)):
-        print(a_product_prices[i], " ", a_product_names[i])
+    #for i in range(len(a_product_prices)):
+    #    print(a_product_prices[i], " ", a_product_names[i])
 
     #if lists are empty then exception case is raised
     if not a_product_pics or not a_product_links or not a_product_names or not a_product_prices:
