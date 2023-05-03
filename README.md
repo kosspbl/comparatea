@@ -35,9 +35,17 @@ Now we can install all the dependencies / libraries.
 ```
 pip install Flask bs4 requests lxml
 ```
+Or
+```
+pip install -r requirements.txt
+```
 - Running :
 Simply run the app.py python file...
 ```
 python3 app.py
+```
+Or
+```
+flask run
 ```
 That's it! Now the web application would be deployed on your local server.
