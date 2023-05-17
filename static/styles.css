@@ -302,6 +302,7 @@ body {
     margin-right: auto;
     border-radius : 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 8px 0px;
+    object-fit: cover;
     background-color: #fff;
 }
 
